@@ -2,6 +2,7 @@
 #include <fstream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string>
 using namespace std;
 
 int main()
@@ -99,7 +100,11 @@ int main()
 
     if(satsolution.is_open()){
       if(getline(satsolution, line))
-            cout << line;
+            cout << line << endl;
     }
+    if(!line.compare("SAT"))
+        cout << "E possivel uma cobertura de conjuntos" << endl;
+    else
+        cout << "Nao e possivel uma cobertura de conjuntos" << endl;
     return 0;
 }
