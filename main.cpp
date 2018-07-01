@@ -93,7 +93,8 @@ int main()
 
     system("minisat tmp.cnf tmp.sat");
 
-    ifstream satsolution("tmp.sat");
+    ifstream satsolution;
+    satsolution.open("tmp.sat");
     string line;
 
     if(satsolution.is_open()){
