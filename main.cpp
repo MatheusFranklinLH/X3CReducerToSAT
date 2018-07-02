@@ -43,7 +43,7 @@ int main()
 
     //leitura de instancia
     ifstream data;
-    data.open("instancia2.txt");
+    data.open("instancia1.txt");
     int lin =0, col=0;
     int **A;
 

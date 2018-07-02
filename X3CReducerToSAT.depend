@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1530496637 source:c:\users\pichau\downloads\nova pasta\fs3mod\x3creducertosat\main.cpp
+1530536560 source:c:\users\pichau\downloads\nova pasta\fs3mod\x3creducertosat\main.cpp
 	<iostream>
 	<fstream>
 	<stdio.h>
