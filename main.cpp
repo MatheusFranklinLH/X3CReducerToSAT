@@ -7,7 +7,9 @@ using namespace std;
 
 int main()
 {
-    int A[5][6];
+    int j, i;
+
+    /*int A[5][6];
     A[0][0] = 1;
     A[1][0] = 0;
     A[2][0] = 1;
@@ -37,13 +39,36 @@ int main()
     A[1][5] = 1;
     A[2][5] = 1;
     A[3][5] = 0;
-    A[4][5] = 0;
+    A[4][5] = 0;*/
+
+    //leitura de instancia
+    ifstream data;
+    data.open("instancia2.txt");
+    int lin =0, col=0;
+    int **A;
+
+    if(data.is_open()){
+        data >> col;
+        data >> lin;
+
+        A = new int *[lin];
+        for(i=0;i<lin;i++)
+            A[i] = new int[col]; //alocando matriz
+
+        for(i=0;i<lin;i++){
+            for(j=0;j<col;j++){
+                data >> A[i][j];
+            }
+        }
+    }
+
+    data.close();
+    //termina leitura
 
     int cont;
-    int j, i;
     int x = 1;
-    int numConj = 5;
-    int numX = 6;
+    int numConj = lin;
+    int numX = col;
     int contCL = 0;
     int contaux;
 
